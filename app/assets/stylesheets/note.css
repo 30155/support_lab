@@ -38,6 +38,19 @@
 }
 
 /* 画面左側 */
+.search-input {
+  width: 400px;
+  height: 30px;
+  margin: 0 10px 40px 0;
+}
+
+.search-btn {
+  width: 100px;
+  height: 30px;
+  color: yellow;
+  background-color: teal;
+  border: 2px solid yellow;
+}
 
 .word-lists {
   padding-left: 40px;
