@@ -45,7 +45,7 @@ header {
 }
 
 .wrapper {
-  background-image: url(top_sample1.jpg);
+  background-image: url(top-sample.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
