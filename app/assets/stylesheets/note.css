@@ -1,0 +1,105 @@
+.word-wrapper {
+  background-color: teal;
+  border: 7px solid burlywood;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.word-title {
+  padding: 50px 0 20px;
+}
+
+.word-title h2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+.word-title h2::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%; /* 位置調整 */
+	transform: translate(-50%); /* 位置調整 */
+	bottom: -10px; /* 下線の上下位置調整 */
+	width: 400px; /* 下線の幅 */
+	height: 1px; /* 下線の太さ */
+	background-color: white; /* 下線の色 */
+}
+
+.announcement {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.word-content {
+  display: flex;
+}
+
+/* 画面左側 */
+
+.word-lists {
+  padding-left: 40px;
+  width: 50%;
+  font-size: 20px;
+  line-height: 150%;
+  margin-left: 20px;
+}
+
+.word-link {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* 画面右側(フォーム) */
+textarea {
+  resize: none;
+}
+
+.word-form {
+  width: 50vw;
+  border: 1px solid white;
+  padding: 20px 0 10px;
+  margin: 0 40px 40px 0;
+}
+
+.new-edit-word {
+  text-align: center;
+  font-size: 25px;
+}
+
+
+.word-field, .small-word-field, .large-word-field {
+  width: 80%;
+  font-size: 16px;
+  display: block;
+  margin: 15px auto;
+  padding: 2px;
+}
+
+.word-field {
+  height: 28px;
+}
+
+.small-word-field {
+  height: 50px;
+}
+
+.large-word-field {
+  height: 200px;
+}
+
+.save-word-btn {
+  display: block;
+  width: 150px;
+  height: 35px;
+  margin: 15px auto;
+  font-size: 22px;
+  font-weight: bold;
+  color: skyblue;
+  background-color: teal;
+  border: 2px solid skyblue;
+}
+
