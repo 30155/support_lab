@@ -33,6 +33,11 @@ class NotesController < ApplicationController
     redirect_to action: :index
   end
 
+  def search
+    @notes = Note.search(params[:keyword])
+    render :index
+  end
+
   private
 
   def note_params
