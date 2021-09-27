@@ -20,12 +20,12 @@
 	content: '';
 	display: block;
 	position: absolute;
-	left: 50%; /* 位置調整 */
-	transform: translate(-50%); /* 位置調整 */
-	bottom: -10px; /* 下線の上下位置調整 */
-	width: 400px; /* 下線の幅 */
-	height: 1px; /* 下線の太さ */
-	background-color: white; /* 下線の色 */
+	left: 50%;
+	transform: translate(-50%);
+	bottom: -10px;
+	width: 400px;
+	height: 1px;
+	background-color: white;
 }
 
 .announcement {
@@ -116,6 +116,7 @@ textarea {
   border: 2px solid skyblue;
 }
 
+/* 編集画面 */
 .edit-word-form {
   margin: 0 auto 30px;
 }
