@@ -13,7 +13,7 @@
       <div class="word-lists">
         
         <% @notes.each do |note| %>
-            <%=link_to "□ #{note.word}", "#", class:"word-link" %><br>
+            <%=link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
         <% end %>
       </div>
     
