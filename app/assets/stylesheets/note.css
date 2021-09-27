@@ -106,3 +106,19 @@ textarea {
 .edit-word-form {
   margin: 0 auto 30px;
 }
+
+.delete-word-btn {
+  width: 150px;
+  height: 30px;
+  margin: 15px auto;
+  background-color: teal;
+  border: 2px solid palevioletred;
+  text-align: center;
+}
+
+.delete-word {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: palevioletred;
+}

@@ -17,6 +17,7 @@
       <%= f.text_area :text, class:"large-word-field", id:"word-text", placeholder:" text" %>
       <%= f.text_area :reference, class:"small-word-field", id:"word-reference", placeholder:" reference" %>
       <%= f.submit "save" ,class:"save-word-btn" %>
+      <div class="delete-word-btn"><%=link_to 'delete', note_path(@note.id), method: :delete, class:"delete-word"%></div>
     </div>
   <% end %>
 </div>
