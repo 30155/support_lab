@@ -1,3 +1,7 @@
+.field_with_errors {
+  display: contents;  /* リダイレクト時のレイアウト崩れ防止 */
+}
+
 .ex-wrapper {
   background: linear-gradient(#05e2ff, #0099ff);
   font-family: Arial, Helvetica, sans-serif;
