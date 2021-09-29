@@ -13,6 +13,9 @@
       <%= form_with model: @experiment, local: true do |f| %>
         <div class="ex-form">
           <h2 class="ex-new-edit-word">ー 実験内容 ー</h2>
+
+          <%= render 'shared/error_messages', model: f.object %>
+
           <div class="upper-content">
             <%= f.label "実験日時", class: 'datetime-label' %>
             <%= f.datetime_field :datetime, class: 'datetime-field' %>
