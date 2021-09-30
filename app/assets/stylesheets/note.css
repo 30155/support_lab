@@ -38,18 +38,42 @@
 }
 
 /* 画面左側 */
+.upper-left {
+  width: 40vw;
+}
+
+.search-link-box {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 20px;
+  border: 2px solid yellow;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.search-link {
+  text-decoration: none;
+  color: yellow;
+}
+
 .search-input {
-  width: 65%;
+  width: 25vw;
   height: 30px;
   margin: 0 10px 40px 0;
 }
 
 .search-btn {
-  width: 20%;
+  width: 80px;
   height: 30px;
   color: yellow;
   background-color: teal;
   border: 2px solid yellow;
+  margin-right: 7px;
+}
+
+.reset {
+  vertical-align: top;
+  margin-left: auto;
 }
 
 .word-lists {
@@ -64,7 +88,6 @@
   text-decoration: none;
   color: white;
 }
-
 
 /* 画面右側(フォーム) */
 textarea {
@@ -116,7 +139,6 @@ textarea {
   border: 2px solid skyblue;
 }
 
-/* 編集画面 */
 .edit-word-form {
   margin: 0 auto 30px;
 }
