@@ -2,13 +2,18 @@
   display: contents;  /* リダイレクト時のレイアウト崩れ防止 */
 }
 
+html, body {
+  height: 100%;
+}
+
 .ex-wrapper {
-  background: linear-gradient(#05e2ff, #0099ff);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  background: linear-gradient(#05e2ff, #0099ff);
   padding-bottom: 100px;
 }
 
-/* タイトル */
+/* 共通タイトル */
 .ex-title {
   padding: 50px 0 20px;
   color: white;
@@ -36,6 +41,43 @@
 .ex-announcement {
   text-align: center;
   margin-bottom: 80px;
+  color: white;
+  font-size: 18px;
+}
+
+/* 各コンテンツ */
+.ex-lists {
+  width: 70vw;
+  height: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.ex-index-title {
+  padding: 30px 0 30px;
+  font-size: 32px;
+}
+
+.ex-new-link {
+  display: block;
+  width: 60px;
+  text-align: center;
+  border-radius: 2px;
+  border: 2px solid white;
+  background-color: none;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.ex-list {
+  list-style: square;
+}
+
+.ex-link {
+  font-family: sans-serif;
   color: white;
 }
 
@@ -142,4 +184,3 @@
   color: #0099ff;
   border: 2px solid #0099ff;
 }
-

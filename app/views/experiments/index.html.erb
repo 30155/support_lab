@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+
+<div class="ex-wrapper">
+  <div class="ex-title">
+    <h2>Experiment</h2>
+  </div>
+  <div class="ex-announcement">
+    <h6>Keep a record of your experiments.</h6>
+  </div>
+
+    
+  <div class="ex-lists">
+    <h2 class="ex-index-title">Experiment List</h2>
+    <%= link_to "NEW", new_experiment_path, class:"ex-new-link" %>
+    <% @experiments.each do |experiment| %>
+      <li class="ex-list"><%= link_to "#{experiment.datetime} 【 #{experiment.title} 】", "#", class:"ex-link" %></li><br>
+    <% end %>
+  </div>
+
+</div>

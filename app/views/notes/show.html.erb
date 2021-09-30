@@ -17,14 +17,11 @@
             <%= form.submit "search", class: "search-btn" %>
             <%=link_to image_tag('/images/Reset.png'), notes_path, class:"reset" %>
           <% end %>
-          
-          
         </div>
         
         <% @notes.each do |note| %>
             <%=link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
         <% end %>
-
       </div>
 
     <%= form_with model: @note, local: true do |f| %>
