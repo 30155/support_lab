@@ -6,5 +6,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :experiments, only: [:index, :new, :create, :edit, :update]
+  resources :experiments, only: [:index, :new, :create, :edit, :update, :destroy]
 end
