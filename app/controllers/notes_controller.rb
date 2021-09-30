@@ -40,7 +40,7 @@ class NotesController < ApplicationController
 
   def search
     @notes = Note.search(params[:keyword]).order(word_kana: "ASC")
-    render :index
+    render :show
   end
 
   private
