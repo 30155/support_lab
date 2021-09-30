@@ -1,4 +1,8 @@
 class ExperimentsController < ApplicationController
+  def index
+    @experiments = Experiment.order(datetime: "DESC")
+  end
+
   def new
     @experiment = Experiment.new
   end
