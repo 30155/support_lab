@@ -42,18 +42,16 @@
   width: 40vw;
 }
 
-.search-link-box {
+.search-link {
+  display: block;
+  text-decoration: none;
+  color: yellow;
   width: 150px;
   height: 30px;
   margin-bottom: 20px;
   border: 2px solid yellow;
   border-radius: 4px;
   text-align: center;
-}
-
-.search-link {
-  text-decoration: none;
-  color: yellow;
 }
 
 .search-input {

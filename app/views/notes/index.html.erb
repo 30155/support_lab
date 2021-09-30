@@ -11,7 +11,7 @@
     
   <div class="word-content">
     <div class="word-lists">
-      <div class="search-link-box"><%= link_to "search", "/notes/show", class:"search-link" %></div>
+      <%= link_to "search", "/notes/show", class:"search-link" %>
       
       <% @notes.each do |note| %>
         <%= link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
