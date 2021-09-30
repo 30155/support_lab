@@ -9,25 +9,35 @@
   </div>
 
     
-  <div class="word-content">
-    <div class="word-lists">
-      <div class="search-link-box"><%= link_to "search", "/notes/show", class:"search-link" %></div>
-      
-      <% @notes.each do |note| %>
-        <%= link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
-      <% end %>
-    </div>
-    
+    <div class="word-content">
+      <div class="word-lists">
+        <div class="upper-left">
+          <%= form_with(url: search_notes_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.text_field :keyword, placeholder: " keyword", class: "search-input" %>
+            <%= form.submit "search", class: "search-btn" %>
+            <%=link_to image_tag('/images/Reset.png'), notes_path, class:"reset" %>
+          <% end %>
+          
+          
+        </div>
+        
+        <% @notes.each do |note| %>
+            <%=link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
+        <% end %>
+
+      </div>
+
     <%= form_with model: @note, local: true do |f| %>
       <div class="word-form">
-        <h2 class="new-edit-word">new word</h2>
+        <h2 class="new-edit-word">Please push "Reset-Button"</h2>
         <%= f.text_area :word, class:"word-field", id:"word-name", placeholder:" word ( Require, 40 characters maximum )", maxlength:"40" %>
         <%= f.text_area :word_kana, class:"word-field", id:"word-kana", placeholder:" kana ( Require )" %>
         <%= f.text_area :summary, class:"small-word-field", id:"word-summary", placeholder:" summary" %>
         <%= f.text_area :text, class:"large-word-field", id:"word-text", placeholder:" text" %>
         <%= f.text_area :reference, class:"small-word-field", id:"word-reference", placeholder:" reference" %>
-        <%= f.submit "save" ,class:"save-word-btn" %>
       </div>
     <% end %>
   </div>
+
+  
 </div>
