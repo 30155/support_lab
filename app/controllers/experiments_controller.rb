@@ -10,7 +10,7 @@ class ExperimentsController < ApplicationController
   def create
     @experiment = Experiment.new(experiment_params)
     if @experiment.save
-      redirect_to action: :new
+      redirect_to action: :index
     else
       render :new
     end
