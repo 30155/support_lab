@@ -15,7 +15,7 @@ class NotesController < ApplicationController
   end
 
   def show
-    @notes = Note.order(word_kana: "ASC")
+    @notes = Note.order(word_kana: 'ASC')
     @note = Note.new
   end
 
@@ -39,7 +39,7 @@ class NotesController < ApplicationController
   end
 
   def search
-    @notes = Note.search(params[:keyword]).order(word_kana: "ASC")
+    @notes = Note.search(params[:keyword]).order(word_kana: 'ASC')
     render :show
   end
 

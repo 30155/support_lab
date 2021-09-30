@@ -1,6 +1,6 @@
 class ExperimentsController < ApplicationController
   def index
-    @experiments = Experiment.order(datetime: "DESC")
+    @experiments = Experiment.order(datetime: 'DESC')
   end
 
   def new
@@ -38,6 +38,7 @@ class ExperimentsController < ApplicationController
   private
 
   def experiment_params
-    params.require(:experiment).permit(:datetime, :weather_id, :temperature, :humidity, :member, :title, :purpose, :method, :condition1, :condition2, :result, :consideration, :note).merge(user_id: current_user.id)
+    params.require(:experiment).permit(:datetime, :weather_id, :temperature, :humidity, :member, :title, :purpose, :method,
+                                       :condition1, :condition2, :result, :consideration, :note).merge(user_id: current_user.id)
   end
 end
