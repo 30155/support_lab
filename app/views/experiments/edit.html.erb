@@ -52,6 +52,7 @@
             <%= f.text_area :note, class:"ex-small-field", id:"note" %>
           </div>
           <%= f.submit "変更" ,class:"ex-save-btn" %>
+          <%= link_to "削除", experiment_path, method: :delete, class:"ex-delete" %>
         </div>
       <% end %>
     </div>

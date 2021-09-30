@@ -184,3 +184,16 @@ html, body {
   color: #0099ff;
   border: 2px solid #0099ff;
 }
+
+.ex-delete {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}

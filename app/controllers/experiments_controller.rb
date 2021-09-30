@@ -29,6 +29,12 @@ class ExperimentsController < ApplicationController
     end
   end
 
+  def destroy
+    experiment = Experiment.find(params[:id])
+    experiment.destroy
+    redirect_to action: :index
+  end
+
   private
 
   def experiment_params
