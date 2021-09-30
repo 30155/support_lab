@@ -14,6 +14,11 @@ class NotesController < ApplicationController
     end
   end
 
+  def show
+    @notes = Note.order(word_kana: "ASC")
+    @note = Note.new
+  end
+
   def edit
     @note = Note.find(params[:id])
   end
@@ -34,7 +39,7 @@ class NotesController < ApplicationController
   end
 
   def search
-    @notes = Note.search(params[:keyword])
+    @notes = Note.search(params[:keyword]).order(word_kana: "ASC")
     render :index
   end
 
