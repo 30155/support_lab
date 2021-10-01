@@ -16,12 +16,12 @@ class SchedulesController < ApplicationController
   end
 
   def edit
-    @experiment = Experiment.find(params[:id])
+    @schedule = Schedule.find(params[:id])
   end
 
   def update
-    @experiment = Experiment.find(params[:id])
-    if @experiment.update(experiment_params)
+    @schedule = Schedule.find(params[:id])
+    if @schedule.update(schedule_params)
       redirect_to action: :index
     else
       render :edit
@@ -29,8 +29,8 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    experiment = Experiment.find(params[:id])
-    experiment.destroy
+    schedule = Schedule.find(params[:id])
+    schedule.destroy
     redirect_to action: :index
   end
 
