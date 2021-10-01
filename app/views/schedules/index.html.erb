@@ -25,7 +25,7 @@
     <% schedules.each do |schedule| %>
       <div>
         <%= schedule.datetime.strftime("%-H:%M") %>
-        <%= link_to schedule.plan, "#", class:"plan-link" %>
+        <%= link_to schedule.plan, edit_schedule_path(schedule.id), class:"plan-link" %>
       </div>
     <% end %>
   <% end %>
