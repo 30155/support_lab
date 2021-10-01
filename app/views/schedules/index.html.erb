@@ -1,7 +1,7 @@
 <div class="toppage">
   <h1 class="top">Schedule Calendar</h1><br>
 
-  <%= form_with model: @schedule, class: 'schedule-form' do |f| %>
+  <%= form_with model: @schedule, local: true, class: 'schedule-form' do |f| %>
     <%= f.label :日時, class: 'datetime-lavel' %>
     <%= f.datetime_field :datetime, class: 'datetime-select' %>
     <%= f.label :予定, class: 'plan-lavel' %>
