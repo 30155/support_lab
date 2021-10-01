@@ -21,12 +21,12 @@
 	content: '';
 	display: block;
 	position: absolute;
-	left: 50%; /* 位置調整 */
-	transform: translate(-50%); /* 位置調整 */
-	bottom: -10px; /* 下線の上下位置調整 */
-	width: 400px; /* 下線の幅 */
-	height: 1px; /* 下線の太さ */
-	background-color: black; /* 下線の色 */
+	left: 50%;
+	transform: translate(-50%);
+	bottom: -10px;
+	width: 400px;
+	height: 1px;
+	background-color: black;
 }
 
 .schedule-announcement {
@@ -123,4 +123,40 @@
   border-radius: 50%;
   background-color: turquoise;
   color: white;
+}
+
+/* 編集ページ */
+.edit-schedule-form {
+  width: 50%;
+  margin: auto;
+}
+
+.edit-schedule-input1 {
+  width: 100%;
+  height: 25px;
+}
+
+.edit-schedule-input2 {
+  width: 100%;
+  height: 200px;
+}
+
+.schedule-edit {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 15px auto 0;
+}
+
+.schedule-delete {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 15px auto 0;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
 }
