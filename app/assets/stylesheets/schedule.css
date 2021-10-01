@@ -1,0 +1,162 @@
+.schedule-wrapper {
+  min-height: 100%;
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: silver;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.schedule-title {
+  padding: 50px 0 20px;
+}
+
+.schedule-title h2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+.schedule-title h2::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: -10px;
+	width: 400px;
+	height: 1px;
+	background-color: black;
+}
+
+.schedule-announcement {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* 入力フォーム */
+.schedule-form {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.schedule-lavel {
+  display: block;
+  margin-top: 10px;
+}
+
+.schedule-input1, .schedule-input2 {
+  display: block;
+  width: 50%;
+}
+
+.schedule-input1 {
+  height: 25px;
+}
+
+.schedule-input2 {
+  height: 50px;
+}
+
+.schedule-save {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin-top: 15px;
+}
+
+/* カレンダー(index) */
+
+.plan-link {
+  text-decoration: none;
+  color: black;
+}
+
+.plan-link:hover {
+  padding: 5px;
+  background-color: turquoise;
+  color: white;
+}
+
+/* カレンダー(month_calendar) */
+.simple-calendar {
+  background-color: white;
+  margin: 40px 10px 0;
+}
+
+.calendar-heading {
+  height: 40px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.calendar-title {
+  font-size: 30px;
+}
+
+.move-left {
+  display: inline;
+  padding: 12px 5px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.move-right {
+  display: inline;
+  padding: 12px 5px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.move-left:hover {
+  border-radius: 50%;
+  background-color: turquoise;
+  color: white;
+}
+
+.move-right:hover {
+  border-radius: 50%;
+  background-color: turquoise;
+  color: white;
+}
+
+/* 編集ページ */
+.edit-schedule-form {
+  width: 50%;
+  margin: auto;
+}
+
+.edit-schedule-input1 {
+  width: 100%;
+  height: 25px;
+}
+
+.edit-schedule-input2 {
+  width: 100%;
+  height: 200px;
+}
+
+.schedule-edit {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 15px auto 0;
+}
+
+.schedule-delete {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 15px auto 0;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+}

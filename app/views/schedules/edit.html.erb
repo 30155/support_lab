@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+
+<div class="schedule-wrapper">
+  <div class="schedule-title">
+    <h2>Schedule</h2>
+  </div>
+  <div class="schedule-announcement">
+    <h6>Manage your schedule.</h6>
+  </div>
+
+  <%= form_with model: @schedule, local: true, class: 'edit-schedule-form' do |f| %>
+    <%= f.label "Datetime", class: 'schedule-lavel' %>
+    <%= f.datetime_field :datetime, class: 'datetime-input' %>
+    <%= f.label "Plan", class: 'schedule-lavel' %>
+    <%= f.text_field :plan, class: 'edit-schedule-input1' %>
+    <%= f.label "Memo", class: 'schedule-lavel' %>
+    <%= f.text_area :memo, class: 'edit-schedule-input2' %>
+    <%= f.submit 'edit', class:"schedule-edit" %>
+    <%= link_to "delete", schedule_path(@schedule.id), method: :delete, class:"schedule-delete" %>
+  <% end %>

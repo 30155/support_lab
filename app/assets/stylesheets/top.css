@@ -1,3 +1,13 @@
+/* 共通設定 */
+.field_with_errors {
+  display: contents;  /* リダイレクト時のレイアウト崩れ防止 */
+}
+
+html, body {
+  height: 100%;
+  width: 100%
+}
+
 header {
   height: 60px;
   background-color: #f0f0f0;

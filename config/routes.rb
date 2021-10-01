@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     end
   end
   resources :experiments, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :schedules, only: [:index, :create, :edit, :update, :destroy]
 end

@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :notes
   has_many :experiments
+  has_many :schedules
 end
