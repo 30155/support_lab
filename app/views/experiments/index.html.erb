@@ -12,7 +12,7 @@
     <h2 class="ex-index-title">Experiment List</h2>
     <%= link_to "NEW", new_experiment_path, class:"ex-new-link" %>
     <% @experiments.each do |experiment| %>
-      <li class="ex-list"><%= link_to "#{experiment.datetime} 【 #{experiment.title} 】", edit_experiment_path(experiment.id), class:"ex-link" %></li><br>
+      <li class="ex-list"><%= link_to "#{experiment.datetime.strftime("%F %H:%M")} 【 #{experiment.title} 】", edit_experiment_path(experiment.id), class:"ex-link" %></li><br>
     <% end %>
   </div>
 

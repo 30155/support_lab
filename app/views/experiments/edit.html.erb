@@ -19,18 +19,18 @@
             <%= f.label "実験日時", class: 'datetime-label' %>
             <%= f.datetime_field :datetime, class: 'datetime-field' %>
             <%= f.label "温度", class: 'upper-label' %>
-            <%= f.text_area :temperature, class:"ex-info-field", id:"ex-info1", style:"vertical-align: middle" %><%= " ℃" %>
+            <%= f.text_field :temperature, class:"ex-info-field", id:"ex-info1", style:"vertical-align: middle" %><%= " ℃" %>
             <%= f.label "湿度", class: 'upper-label' %>
-            <%= f.text_area :humidity, class:"ex-info-field", id:"ex-info2", style:"vertical-align: middle" %><%= " %" %>
+            <%= f.text_field :humidity, class:"ex-info-field", id:"ex-info2", style:"vertical-align: middle" %><%= " %" %>
             <%= f.label "天候", class: 'upper-label' %>
             <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"ex-select-box", id:"weather-status"}) %>
           </div>
 
           <div class="lower-content">
             <%= f.label "メンバー", class: 'lower-label' %>
-            <%= f.text_area :member, class:"ex-member-field", id:"ex-member" %>
+            <%= f.text_field :member, class:"ex-member-field", id:"ex-member" %>
             <%= f.label "タイトル", class: 'lower-label' %>
-            <%= f.text_area :title, class:"ex-member-field", id:"ex-title" %>
+            <%= f.text_field :title, class:"ex-member-field", id:"ex-title" %>
             <%= f.label "目的", class: 'lower-label' %>
             <%= f.text_area :purpose, class:"ex-small-field", id:"purpose" %>
             <%= f.label "実験方法", class: 'lower-label' %>
