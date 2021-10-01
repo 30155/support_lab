@@ -6,8 +6,13 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    Schedule.create(schedule_params)
-    redirect_to action: :index
+    @schedules = Schedule.all
+    @schedule = Schedule.new(schedule_params)
+    if @schedule.save
+      redirect_to action: :index
+    else
+      render :index
+    end
   end
 
   private
