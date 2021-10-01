@@ -77,8 +77,9 @@
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| date           | date       | null: false                    |
+| datetime       | datetime   | null: false                    |
 | plan           | string     | null: false                    |
+| memo           | text       | null: false                    |
 | user           | references | null: false, foreign_key: true |
 
 ### Association
