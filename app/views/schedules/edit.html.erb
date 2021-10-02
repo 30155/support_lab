@@ -9,6 +9,24 @@
   </div>
 
   <%= form_with model: @schedule, local: true, class: 'edit-schedule-form' do |f| %>
+    <div class="edit-button-form">
+      <h4 class="button-title">Priority</h4>
+      <ul class="button-lists">
+        <li class="button">
+          <%= f.radio_button :priority, "High" %>
+          <%= f.label :priority, "High" ,style:"display: inline-block;" %>
+        </li>
+        <li class="button">
+          <%= f.radio_button :priority, "Normal" %>
+          <%= f.label :priority, "Normal" ,style:"display: inline-block;" %>
+        </li>
+        <li class="button">
+          <%= f.radio_button :priority, "Low" %>
+          <%= f.label :priority, "Low" ,style:"display: inline-block;" %>
+        </li>
+      </ul>
+    </div>
+
     <%= f.label "Datetime", class: 'schedule-lavel' %>
     <%= f.datetime_field :datetime, class: 'datetime-input' %>
     <%= f.label "Plan", class: 'schedule-lavel' %>
@@ -18,3 +36,4 @@
     <%= f.submit 'edit', class:"schedule-edit" %>
     <%= link_to "delete", schedule_path(@schedule.id), method: :delete, class:"schedule-delete" %>
   <% end %>
+</div>
