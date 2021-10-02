@@ -4,6 +4,6 @@ class Schedule < ApplicationRecord
   validates :datetime, :plan, presence: true
 
   def start_time
-    self.datetime
+    datetime
   end
 end

@@ -7,22 +7,21 @@
   <div class="announcement">
     <h6>Record the keywords you've learned.</h6>
   </div>
-
     
-    <div class="word-content">
-      <div class="word-lists">
-        <div class="upper-left">
-          <%= form_with(url: search_notes_path, local: true, method: :get, class: "search-form") do |form| %>
-            <%= form.text_field :keyword, placeholder: " keyword", class: "search-input" %>
-            <%= form.submit "search", class: "search-btn" %>
-            <%=link_to image_tag('/images/Reset.png'), notes_path, class:"reset" %>
-          <% end %>
-        </div>
-        
-        <% @notes.each do |note| %>
-            <%=link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
+  <div class="word-content">
+    <div class="word-lists">
+      <div class="upper-left">
+        <%= form_with(url: search_notes_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: " keyword", class: "search-input" %>
+          <%= form.submit "search", class: "search-btn" %>
+          <%=link_to image_tag('/images/Reset.png'), notes_path, class:"reset" %>
         <% end %>
       </div>
+      
+      <% @notes.each do |note| %>
+          <%=link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
+      <% end %>
+    </div>
 
     <%= form_with model: @note, local: true do |f| %>
       <div class="word-form">
@@ -35,6 +34,4 @@
       </div>
     <% end %>
   </div>
-
-  
 </div>

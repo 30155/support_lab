@@ -1,5 +1,4 @@
 class SchedulesController < ApplicationController
-
   def index
     @schedules = Schedule.all
     @schedule = Schedule.new
@@ -39,5 +38,4 @@ class SchedulesController < ApplicationController
   def schedule_params
     params.require(:schedule).permit(:datetime, :plan, :memo, :priority).merge(user_id: current_user.id)
   end
-  
 end
