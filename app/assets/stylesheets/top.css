@@ -60,9 +60,46 @@ header {
   background-image: url(/images/top-sample.jpg);
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
+/* user */
+.user-nav {
+  text-align: right;
+  padding: 20px 30px 0 0;
+}
+
+.nav__btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: 1px white solid;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.nav__btn:hover {
+  color: turquoise;
+  border-color: turquoise;
+}
+
+.nav__logout {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  transition: 0.4s;
+}
+.nav__logout:hover {
+  color: turquoise;
+}
+
+/* topメッセージ */
 .content {
   padding: 150px 0 0 80px;
   color: white;

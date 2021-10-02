@@ -1,6 +1,16 @@
 <%= render "shared/header" %>
 
 <div class="wrapper">
+  <div class="user-nav">
+    <% if user_signed_in? %>
+      <%= link_to "マイページ", "#", class: :nav__btn %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+      <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+    <% end %>
+  </div>
+  
   <div class="content">
     <h3>Support Labは、あなたの素晴らしい研究をサポートします。</h3>
     <h3>共に輝かしい未来社会を創って参りましょう。</h3>
@@ -8,5 +18,3 @@
   <div class="user">
   </div>
 </div>
-
-
