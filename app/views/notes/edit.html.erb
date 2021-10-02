@@ -11,8 +11,8 @@
   
     <div class="word-form, edit-word-form">
       <h2 class="new-edit-word">edit word</h2>
-      <%= f.text_area :word, class:"word-field", id:"word-name", placeholder:" word ( Require, 40 characters maximum )", maxlength:"40" %>
-      <%= f.text_area :word_kana, class:"word-field", id:"word-kana", placeholder:" kana ( Require )" %>
+      <%= f.text_field :word, class:"word-field", id:"word-name", placeholder:" word ( Require, 40 characters maximum )", maxlength:"40" %>
+      <%= f.text_field :word_kana, class:"word-field", id:"word-kana", placeholder:" kana ( Require )" %>
       <%= f.text_area :summary, class:"small-word-field", id:"word-summary", placeholder:" summary" %>
       <%= f.text_area :text, class:"large-word-field", id:"word-text", placeholder:" text" %>
       <%= f.text_area :reference, class:"small-word-field", id:"word-reference", placeholder:" reference" %>

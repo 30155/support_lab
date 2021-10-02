@@ -100,7 +100,7 @@
 
 .datetime-field {
   border: none;
-  width: 25%;
+  width: 30%;
 }
 
 .upper-label {
@@ -125,7 +125,8 @@
 }
 
 .ex-member-field {
-  border-color: #0099ff;
+  border: none;
+  border: 1px solid #0099ff;
   display: block;
   height: 30px;
   width: 100%;

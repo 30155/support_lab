@@ -37,7 +37,11 @@
 /* 入力フォーム */
 .schedule-form {
   margin: 0 auto;
-  width: 85%;
+  width: 80%;
+}
+
+.input-form {
+  width: 50%;
 }
 
 .schedule-lavel {
@@ -47,7 +51,7 @@
 
 .schedule-input1, .schedule-input2 {
   display: block;
-  width: 50%;
+  width: 100%;
 }
 
 .schedule-input1 {
@@ -59,20 +63,39 @@
 }
 
 .schedule-save {
-  display: block;
   width: 100px;
   height: 30px;
   margin-top: 15px;
 }
 
-/* カレンダー(index) */
+/* ラジオボタン */
+.button {
+  line-height: 30px;
+  margin-right: 20px;
+}
 
-.plan-link {
+.button-lists {
+  display: flex;
+}
+
+/* カレンダー(index) */
+.plan-link1, .plan-link2, .plan-link3 {
   text-decoration: none;
+}
+
+.plan-link1 {
+  color: red;
+}
+
+.plan-link3 {
+  color: blue;
+}
+
+.plan-link2 {
   color: black;
 }
 
-.plan-link:hover {
+.plan-link1:hover, .plan-link2:hover, .plan-link3:hover {
   padding: 5px;
   background-color: turquoise;
   color: white;
@@ -152,7 +175,7 @@
   display: block;
   width: 150px;
   height: 30px;
-  margin: 15px auto 0;
+  margin: 15px auto 30px;
   text-align: center;
   line-height: 30px;
   text-decoration: none;
