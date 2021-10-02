@@ -8,37 +8,33 @@
     <h6>Manage your schedule.</h6>
   </div>
 
-  <div class="schedule-form">
-    <%= form_with model: @schedule, local: true, class: 'schedule-form' do |f| %>
-      <div class="input-form">
-        <%= f.label "Datetime", class: 'schedule-lavel' %>
-        <%= f.datetime_field :datetime, class: 'datetime-input' %>
-        <%= f.label "Plan", class: 'schedule-lavel' %>
-        <%= f.text_field :plan, class: 'schedule-input1' %>
-        <%= f.label "Memo", class: 'schedule-lavel' %>
-        <%= f.text_area :memo, class: 'schedule-input2' %>
-        <%= f.submit 'save', class:"schedule-save" %>
-      </div>
-      
-      <div class="button-form">
-        <h4 class="button-title">Priority</h4>
-        <ul class="button-lists">
-          <li class="button">
-            <%= f.radio_button :priority, "High" %>
-            <%= f.label :priority, "High" ,style:"display: inline-block;" %>
-          </li>
-          <li class="button">
-            <%= f.radio_button :priority, "Normal" %>
-            <%= f.label :priority, "Normal" ,style:"display: inline-block;" %>
-          </li>
-          <li class="button">
-            <%= f.radio_button :priority, "Low" %>
-            <%= f.label :priority, "Low" ,style:"display: inline-block;" %>
-          </li>
-        </ul>
-      </div>
-    <% end %>
-  </div>
+  <%= form_with model: @schedule, local: true, class: 'schedule-form' do |f| %>
+    <h4 class="button-title">Priority</h4>
+    <ul class="button-lists">
+      <li class="button">
+        <%= f.radio_button :priority, "High" %>
+        <%= f.label :priority, "High" ,style:"display: inline-block;" %>
+      </li>
+      <li class="button">
+        <%= f.radio_button :priority, "Normal" %>
+        <%= f.label :priority, "Normal" ,style:"display: inline-block;" %>
+      </li>
+      <li class="button">
+        <%= f.radio_button :priority, "Low" %>
+        <%= f.label :priority, "Low" ,style:"display: inline-block;" %>
+      </li>
+    </ul>
+
+    <div class="input-form">
+      <%= f.label "Datetime", class: 'schedule-lavel' %>
+      <%= f.datetime_field :datetime, class: 'datetime-input' %>
+      <%= f.label "Plan", class: 'schedule-lavel' %>
+      <%= f.text_field :plan, class: 'schedule-input1' %>
+      <%= f.label "Memo", class: 'schedule-lavel' %>
+      <%= f.text_area :memo, class: 'schedule-input2' %>
+      <%= f.submit 'save', class:"schedule-save" %>
+    </div>
+  <% end %>
 
 <div class="calendar">
   <%= month_calendar events: @schedules do |date, schedules| %>
