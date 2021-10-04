@@ -1,0 +1,84 @@
+:focus {
+  outline: 0;
+}
+
+.sign {
+  width: 38%;
+  margin: 80px auto 30px;
+  font-size: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 35%;
+  padding: 20px;
+}
+
+
+.up {
+  color: black;
+  background: -webkit-linear-gradient(top, #8f66ff 0%, #6699FF 50%, #66baff 51%, #00CCFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.in {
+  color: black;
+  background: -webkit-linear-gradient(top, #00CCFF 0%, #66baff 50%, #6699FF 51%, #8f66ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.sign_up_form {
+  margin-top: 20px;
+}
+
+.sign_in_form {
+  margin-top: 40px;
+}
+
+.user_info {
+  border: none;
+  border-bottom: 2px solid #00CCFF;
+  border-image: linear-gradient(to right, #6699FF 0%, #00CCFF 100%);
+  border-image-slice: 1;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 30px;
+  transition: all 0.15s ease;
+}
+
+.field {
+  position: relative;
+}
+
+.user-label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  opacity: 0.5;
+  transform-origin: left;
+  transform: translateY(0);
+  transition: all .15s;
+}
+
+.user-label.move {
+  transform: translateY(-20px) scale(0.8);
+}
+
+
+.actions {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sign-up-in {
+  margin-top: 30px;
+  width: 100%;
+  height: 35px;
+  color: white;
+  background-color: #6699FF;
+  border: 1px solid #6699FF;
+  border-radius: 30px;
+}
