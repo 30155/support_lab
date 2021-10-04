@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :notes
   has_many :experiments
   has_many :schedules
+
+  validates :nickname, :name, :affiliation, presence: true
+  validates :password,
+            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Include both letters and numbers' }
 end
