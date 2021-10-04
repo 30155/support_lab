@@ -82,3 +82,9 @@
   border: 1px solid #6699FF;
   border-radius: 30px;
 }
+
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
