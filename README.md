@@ -51,22 +51,22 @@
 
 ## experiments テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| datetime      | datetime   | null: false                    |
-| weather_id    | integer    |                                |
-| temperature   | float      |                                |
-| humidity      | float      |                                |
-| member        | string     |                                |
-| title         | string     | null: false                    |
-| purpose       | text       |                                |
-| method        | text       |                                |
-| condition1    | text       |                                |
-| condition2    | text       |                                |
-| result        | text       |                                |
-| consideration | text       |                                |
-| note          | text       |                                |
-| user          | references | null: false, foreign_key: true |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| datetime            | datetime   | null: false                    |
+| weather_id          | integer    |                                |
+| temperature         | float      |                                |
+| humidity            | float      |                                |
+| member              | string     |                                |
+| title               | string     | null: false                    |
+| purpose             | text       |                                |
+| experimental_method | text       |                                |
+| condition1          | text       |                                |
+| condition2          | text       |                                |
+| result              | text       |                                |
+| consideration       | text       |                                |
+| note                | text       |                                |
+| user                | references | null: false, foreign_key: true |
 
 ### Association
 
