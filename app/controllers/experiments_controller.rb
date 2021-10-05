@@ -1,6 +1,9 @@
 class ExperimentsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :move_to_index, only: :edit
+
   def index
-    @experiments = Experiment.order(datetime: 'DESC')
+    @experiments = Experiment.where(user_id: current_user.id).order(datetime: 'DESC')
   end
 
   def new
@@ -40,5 +43,10 @@ class ExperimentsController < ApplicationController
   def experiment_params
     params.require(:experiment).permit(:datetime, :weather_id, :temperature, :humidity, :member, :title, :purpose, :experimental_method,
                                        :condition1, :condition2, :result, :consideration, :note).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    @experiment = Experiment.find(params[:id])
+    redirect_to action: :index if current_user.id != @experiment.user_id
   end
 end
