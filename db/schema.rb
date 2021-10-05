@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_02_124031) do
+ActiveRecord::Schema.define(version: 2021_10_05_091350) do
 
   create_table "experiments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "datetime", null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_10_02_124031) do
     t.string "member"
     t.string "title", null: false
     t.text "purpose"
-    t.text "method"
+    t.text "experimental_method"
     t.text "condition1"
     t.text "condition2"
     t.text "result"

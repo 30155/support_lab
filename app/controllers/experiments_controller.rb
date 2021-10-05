@@ -38,7 +38,7 @@ class ExperimentsController < ApplicationController
   private
 
   def experiment_params
-    params.require(:experiment).permit(:datetime, :weather_id, :temperature, :humidity, :member, :title, :purpose, :method,
+    params.require(:experiment).permit(:datetime, :weather_id, :temperature, :humidity, :member, :title, :purpose, :experimental_method,
                                        :condition1, :condition2, :result, :consideration, :note).merge(user_id: current_user.id)
   end
 end
