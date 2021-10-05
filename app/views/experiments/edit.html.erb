@@ -19,9 +19,9 @@
             <%= f.label "実験日時", class: 'datetime-label' %>
             <%= f.datetime_field :datetime, class: 'datetime-field' %>
             <%= f.label "温度", class: 'upper-label' %>
-            <%= f.text_field :temperature, class:"ex-info-field", id:"ex-info1", style:"vertical-align: middle" %><%= " ℃" %>
+            <%= f.text_field :temperature, class:"ex-info-field" %><%= " ℃" %>
             <%= f.label "湿度", class: 'upper-label' %>
-            <%= f.text_field :humidity, class:"ex-info-field", id:"ex-info2", style:"vertical-align: middle" %><%= " %" %>
+            <%= f.text_field :humidity, class:"ex-info-field" %><%= " %" %>
             <%= f.label "天候", class: 'upper-label' %>
             <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"ex-select-box", id:"weather-status"}) %>
           </div>

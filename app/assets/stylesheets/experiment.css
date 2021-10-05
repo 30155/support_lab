@@ -94,7 +94,7 @@
   display: block;
   height: 40px;
   border: 1px solid #0099ff; 
-  padding: 10px 0 0 5px;
+  padding-top: 7px;
   margin-bottom: 10px;
 }
 
@@ -112,7 +112,7 @@
   display: inline-block;
   height: 27px;
   text-align: right;
-  width: 4.5%;
+  width: 7%;
 }
 
 .ex-label {
