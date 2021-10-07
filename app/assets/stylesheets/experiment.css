@@ -74,7 +74,7 @@
 }
 
 .ex-content {
-  width: 65%;
+  width: 70%;
   height: 80%;
   margin: 0 auto;
   background-color: white;
@@ -100,7 +100,7 @@
 
 .datetime-field {
   border: none;
-  width: 30%;
+  width: 250px;
 }
 
 .upper-label {
@@ -111,8 +111,12 @@
   border-color: white;
   display: inline-block;
   height: 27px;
+  width: 50px;
   text-align: right;
-  width: 7%;
+}
+
+.ex-select-box {
+  width: 80px;
 }
 
 .ex-label {
