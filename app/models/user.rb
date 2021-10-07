@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :notes
   has_many :experiments
   has_many :schedules
+  has_many :room_users
+  has_many :rooms, through: :room_users
 
   validates :nickname, :name, :affiliation, presence: true
   validates :name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'is invalid. Input full-width characters.' }
