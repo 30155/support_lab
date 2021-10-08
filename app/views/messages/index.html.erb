@@ -1,10 +1,8 @@
 <%= render "shared/header" %>
 
 <div class="chat-header">
-  <div class="left-header">
-    <div class="room-title">
-      <%= @room.name %>
-    </div>
+  <div class="room-title">
+    <%= link_to @room.name, rooms_path, class:"room-root" %>
   </div>
 </div>
 
