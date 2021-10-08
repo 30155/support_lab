@@ -6,11 +6,7 @@
       <%= @room.name %>
     </div>
   </div>
-  <div class="right-header">
-    <%= link_to "Delete Room", "#", method: :delete, class:"delete-room-button" %>
-  </div>
 </div>
-
 
 <div class="message-wrapper">
   <div class="message-contents" id="message_area">
@@ -56,7 +52,6 @@
   </div>
 </div>
 
-
 <div class="form-area">
   <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
     <div class="form-input">
@@ -69,4 +64,3 @@
     <%= f.submit 'Submit', class: 'form-submit' %>
   <% end %>
 </div>
-
