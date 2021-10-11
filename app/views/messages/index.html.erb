@@ -24,6 +24,13 @@
               <div class="message-content">
                 <%= message.content %>
               </div>
+
+              <div class="image-message">
+                <% message.images.each do |image| %>
+                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
+                <% end %>
+              </div>
+
             </div>
           </div>
         </div><br>
@@ -42,6 +49,13 @@
               <div class="message-content">
                 <%= message.content %>
               </div>
+
+              <div class="image-message">
+                <% message.images.each do |image| %>
+                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
+                <% end %>
+              </div>
+
             </div>
           </div>
         </div><br>
@@ -56,7 +70,7 @@
       <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
       <label class="form-image">
         <span class="image-file">Image</span>
-        <%= f.file_field :image, class: 'hidden' %>
+        <%= f.file_field :images, name: 'message[images][]', class: 'hidden', id: 'message_image', multiple: true %>
       </label>
     </div>
     <%= f.submit 'Submit', class: 'form-submit' %>
