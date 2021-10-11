@@ -89,9 +89,9 @@
 
 ## rooms テーブル
 
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| room_name   | string | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
 

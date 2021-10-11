@@ -1,0 +1,58 @@
+<%= render "shared/header" %>
+
+<div class="chat-wrapper">
+  <div class="chat-title">
+    <h2>Chat Room</h2>
+  </div>
+  <div class="chat-announcement">
+    <h6>Let's exchange opinions with friends.</h6>
+  </div>
+
+  <div class="new-room-form">
+    <h2>New Room</h2>
+    <%=form_with model: @room, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :room, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
+      </div>
+    </div>
+    
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>Member</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <select name="room[user_ids][]" multiple size="2">
+          <option value="" class="choose-message">チャットするユーザーを選択してください</option>
+          <option value="" class="choose-message">以下、複数選択可（Shift + Click）</option>
+          <% User.where.not(id: current_user.id).order(nickname: "DESC").each do |user| %>
+            <option value=<%= user.id %>><%= user.nickname %></option>
+          <% end %>
+        </select>
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--btn'>
+        <%= f.submit class: 'chat-room-form__action-btn' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+    
+  <h2 class="room-list-title">Room List</h2>
+  <div class="room-lists">
+    <% current_user.rooms.each do |room| %>
+      <div class="room">
+        <ul class="room-names">
+          <li><%= link_to room.name, room_messages_path(room.id), class:"room-name" %></li>
+          <li><%= link_to "Delete", room_path(room.id), method: :delete, class:"delete-room-button" %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

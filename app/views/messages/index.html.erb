@@ -1,0 +1,78 @@
+<%= render "shared/header" %>
+
+<div class="chat-header">
+  <div class="room-title">
+    <%= link_to @room.name, rooms_path, class:"room-root" %>
+  </div>
+</div>
+
+<div class="message-wrapper">
+  <div class="message-contents" id="message_area">
+    <% @messages.each do |message| %>
+      <%if current_user.id == message.user_id%>
+        <div class="left">
+          <div class="messages-current_user">
+            <div class="upper-message">
+              <div class="message-user">
+                <%= message.user.nickname %>
+              </div>
+              <div class="message-date">
+                <%= message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+              </div>
+            </div>
+            <div class="lower-message">
+              <div class="message-content">
+                <%= message.content %>
+              </div>
+
+              <div class="image-message">
+                <% message.images.each do |image| %>
+                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+        </div><br>
+      <% else %>
+        <div class="right">
+          <div class="messages-another_user">
+            <div class="upper-message">
+              <div class="message-user">
+                <%= message.user.nickname %>
+              </div>
+              <div class="message-date">
+                <%= message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+              </div>
+            </div>
+            <div class="lower-message">
+              <div class="message-content">
+                <%= message.content %>
+              </div>
+
+              <div class="image-message">
+                <% message.images.each do |image| %>
+                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+        </div><br>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="form-area">
+  <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+      <label class="form-image">
+        <span class="image-file">Image</span>
+        <%= f.file_field :images, name: 'message[images][]', class: 'hidden', id: 'message_image', multiple: true %>
+      </label>
+    </div>
+    <%= f.submit 'Submit', class: 'form-submit' %>
+  <% end %>
+</div>

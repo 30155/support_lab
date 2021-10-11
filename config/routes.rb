@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   end
   resources :experiments, only: [:index, :new, :create, :edit, :update, :destroy]
   resources :schedules, only: [:index, :create, :edit, :update, :destroy]
+  resources :rooms, only: [:index, :create, :destroy] do
+    resources :messages, only: [:index, :create]
+  end
 end
