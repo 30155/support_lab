@@ -12,55 +12,18 @@
       <%if current_user.id == message.user_id%>
         <div class="left">
           <div class="messages-current_user">
-            <div class="upper-message">
-              <div class="message-user">
-                <%= message.user.nickname %>
-              </div>
-              <div class="message-date">
-                <%= message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
-              </div>
-            </div>
-            <div class="lower-message">
-              <div class="message-content">
-                <%= message.content %>
-              </div>
-
-              <div class="image-message">
-                <% message.images.each do |image| %>
-                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
-                <% end %>
-              </div>
-
-            </div>
+            <%= render partial: "shared/message", locals: { message: message } %>
           </div>
         </div><br>
       <% else %>
         <div class="right">
           <div class="messages-another_user">
-            <div class="upper-message">
-              <div class="message-user">
-                <%= message.user.nickname %>
-              </div>
-              <div class="message-date">
-                <%= message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
-              </div>
-            </div>
-            <div class="lower-message">
-              <div class="message-content">
-                <%= message.content %>
-              </div>
-
-              <div class="image-message">
-                <% message.images.each do |image| %>
-                  <%= image_tag image.variant(resize: '500x500'), alt: 'テスト画像', class:'images' if message.images.attached? %>
-                <% end %>
-              </div>
-
-            </div>
+            <%= render partial: "shared/message", locals: { message: message } %>
           </div>
         </div><br>
       <% end %>
     <% end %>
+    <div id="image-list"></div>
   </div>
 </div>
 
