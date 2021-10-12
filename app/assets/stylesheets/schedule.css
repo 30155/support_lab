@@ -1,7 +1,6 @@
 .schedule-wrapper {
   min-height: 100%;
   width: 100%;
-  padding-bottom: 10px;
   background-color: silver;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,19 +33,24 @@
   margin-bottom: 80px;
 }
 
+.calender-form {
+  display: flex;
+}
+
 /* 入力フォーム */
 .schedule-form {
-  margin: 0 auto;
-  width: 80%;
+  width: 21%;
+  margin: 20px;
 }
 
 .input-form {
-  width: 50%;
+  width: 100%;
 }
 
 .schedule-lavel {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 2px;
 }
 
 .schedule-input1, .schedule-input2 {
@@ -55,17 +59,18 @@
 }
 
 .schedule-input1 {
-  height: 25px;
+  height: 30px;
 }
 
 .schedule-input2 {
-  height: 50px;
+  height: 120px;
 }
 
 .schedule-save {
   width: 100px;
   height: 30px;
-  margin-top: 15px;
+  margin: 25px auto;
+  display: block;
 }
 
 /* ラジオボタン */
@@ -96,15 +101,19 @@
 }
 
 .plan-link1:hover, .plan-link2:hover, .plan-link3:hover {
-  padding: 5px;
   background-color: turquoise;
   color: white;
+  border-radius: 1px;
 }
 
 /* カレンダー(month_calendar) */
+.calendar {
+  width: 75%;
+  margin: 0 5px 5px 0;
+}
+
 .simple-calendar {
   background-color: white;
-  margin: 40px 10px 0;
 }
 
 .calendar-heading {
