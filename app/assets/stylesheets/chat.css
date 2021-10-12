@@ -284,3 +284,9 @@ select {
 .message-user {
   margin-right: 7px;
 }
+
+.image-size {
+  max-height: 500px;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
