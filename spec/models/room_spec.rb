@@ -7,7 +7,7 @@ RSpec.describe Room, type: :model do
 
   describe 'チャットルーム作成' do
     context '新規作成できる場合' do
-      it "nameの値が存在すれば作成できる" do
+      it "nameが存在すれば作成できる" do
         expect(@room).to be_valid
       end
     end
