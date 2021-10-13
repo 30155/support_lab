@@ -35,6 +35,11 @@ RSpec.describe Note, type: :model do
         @note.valid?
         expect(@note.errors.full_messages).to include("Word kana can't be blank")
       end
+      it 'userが紐付いていないと保存できない' do
+        @note.user = nil
+        @note.valid?
+        expect(@note.errors.full_messages).to include('User must exist')
+      end
     end
   end
 end
