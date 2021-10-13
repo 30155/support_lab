@@ -1,4 +1,7 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :move_to_room, only: :index
+
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
@@ -20,5 +23,11 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content, images: []).merge(user_id: current_user.id)
+  end
+
+  def move_to_room
+    num = params[:room_id]
+    ids = RoomUser.where(room_id = num).pluck(:user_id)
+    redirect_to rooms_path unless ids.include?(current_user.id)
   end
 end
