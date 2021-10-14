@@ -8,7 +8,6 @@
 
 <div class="message-wrapper">
   <div class="message-contents" id="message_area">
-    <div id="image-list"></div>
     <% @messages.each do |message| %>
       <%if current_user.id == message.user_id%>
         <div class="left">
@@ -24,6 +23,7 @@
         </div><br>
       <% end %>
     <% end %>
+    <div id="image-list"></div>
   </div>
 </div>
 

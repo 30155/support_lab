@@ -82,7 +82,7 @@ select {
   color: white;
   background-color: #000088;
   border: none;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 5px 12px;
 }
 
@@ -196,7 +196,6 @@ select {
 }
 .form-image {
   background-color: #FF773E;
-  box-shadow: 3px 3px 0px -1px #000088;
   color: white;
   font-size: 20px;
   width: 100px;
@@ -212,10 +211,9 @@ select {
   background-color: #000088;
   border: 2px solid #FF8856;
   color: #FF8856;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   height: 40px;
-  padding: 0 15px;
+  padding: 0 12px;
   line-height: 38px;
 }
 
