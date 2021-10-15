@@ -95,9 +95,10 @@ select {
 
 .room-lists {
   width: 780px;
-  height: 800px;
+  height: 500px;
   padding: 20px;
   margin: 0 auto;
+  overflow: scroll;
 }
 
 .room-names {

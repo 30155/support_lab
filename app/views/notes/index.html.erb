@@ -12,9 +12,11 @@
     <div class="word-lists">
       <%= link_to "search", "/notes/show", class:"search-link" %>
       
-      <% @notes.each do |note| %>
-        <%= link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
-      <% end %>
+      <div class="word-scroll">
+        <% @notes.each do |note| %>
+          <%= link_to "□ #{note.word}", edit_note_path(note.id), class:"word-link" %><br>
+        <% end %>
+      </div>
     </div>
     
     <%= form_with model: @note, local: true do |f| %>

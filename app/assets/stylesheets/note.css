@@ -48,10 +48,12 @@
   color: yellow;
   width: 150px;
   height: 30px;
+  line-height: 150%;
   margin-bottom: 20px;
   border: 2px solid yellow;
   border-radius: 4px;
   text-align: center;
+  
 }
 
 .search-input {
@@ -74,17 +76,22 @@
   margin-left: auto;
 }
 
+.word-scroll {
+  overflow: scroll;
+  height: 500px;
+}
+
 .word-lists {
   padding-left: 40px;
   width: 50%;
   font-size: 20px;
-  line-height: 150%;
   margin-left: 20px;
 }
 
 .word-link {
   text-decoration: none;
   color: white;
+  line-height: 180%;
 }
 
 /* 画面右側(フォーム) */
